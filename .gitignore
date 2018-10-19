@@ -1,0 +1,8 @@
+node_modules/
+yarn-error.log
+storybook-static/
+dist/
+build/
+.cache/
+coverage/
+/apiKey.js

@@ -1,0 +1,32 @@
+$site-breakpoints: (
+	xs: 1px,
+	sm: 480px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1200px
+) !default;
+
+
+/**
+ * CSS Media Queries, or breakpoints mixin, allows users to modify styles
+ * based on the breakpoints defined above (in $site-breakpoints).
+ *
+ * @param  {[type]} $point [description]
+ *
+ * @return {[type]}        [description]
+ */
+@mixin breakpoint($point) {
+	@each $breakpoint in map-keys($site-breakpoints) {
+		@if $point == $breakpoint {
+			@media (min-width: map-get($site-breakpoints, $breakpoint)) { @content; }
+		}
+	}
+}
+
+
+/**
+ Custom point, removes the need to write @media
+**/
+@mixin custompoint($width) {
+	@media (min-width: $width) { @content; }
+}

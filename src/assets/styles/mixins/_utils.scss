@@ -1,0 +1,26 @@
+@mixin visuallyHidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin transitionFade($duration:5s) {
+  transition-property: opacity, visibility, transform;
+  transition-duration: $duration;
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+}
+
+@mixin typeRefine {
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}

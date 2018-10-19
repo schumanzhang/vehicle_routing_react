@@ -1,0 +1,23 @@
+.optimized-container {
+  margin-top: 30px;
+  text-align: center;
+  min-height: 500px;
+}
+
+.route-button {
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  background-color: #2ecc71;
+}
+
+.route-button:hover {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.route-button:after {
+  background-color: #27ae60;
+  color: #fff;
+}

@@ -1,0 +1,47 @@
+@import "../../assets/styles/config/_all";
+@import "../../assets/styles/mixins/_all";
+
+$routesHeightOffset: $navHeight;
+
+.routes {
+  height: calc(100% - #{$routesHeightOffset});
+  position: relative;
+  width:100%;
+  perspective: 1000px;
+}
+
+.routes--exit {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100%;
+
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0,0,0);
+  @include transitionFade(0.3s);
+}
+
+.routes--exit-active {
+  opacity: 0;
+  transform: translate3d(0,0,-5em);
+  visibility: hidden;
+}
+
+
+.routes--enter {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0,0,-5em);
+  @include transitionFade(0.3s);
+}
+
+.routes--enter-active {
+  opacity: 1;
+  transform: translate3d(0,0,0em);
+  transition-duration: 0.7s;
+  visibility: visible;
+}

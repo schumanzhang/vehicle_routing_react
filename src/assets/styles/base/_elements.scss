@@ -1,0 +1,67 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: rgba(204, 204, 204, 0.17);
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #e4e4e4;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  position: relative;
+  width: 100%;
+
+  transition-property: background-color, opacity, color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); 
+}
+
+button:hover, button:focus {
+  background-color: #eaeaea;
+  outline: none;
+  color: #676767;
+  transition-duration: 0.2s;
+}
+
+button:active {
+  outline: none;
+  background-color: #b9b9b9;
+}
+
+button:disabled {
+  opacity: 0.3;
+  transition-duration: 0.2s;
+  pointer-events: none;
+}
+
+input, label {
+  position: relative;
+  display: block;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.5em;
+  width: 100%;
+}

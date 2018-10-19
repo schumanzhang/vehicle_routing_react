@@ -1,0 +1,38 @@
+@import "../../assets/styles/config/_all";
+@import "../../assets/styles/mixins/_all";
+
+$navHeight:5em!default;
+
+.nav {
+  border-bottom: 1px solid #ccc;
+  padding:1px 1em;
+  height: $navHeight;
+  position: relative;   
+  width: 100%;
+}
+.nav__title {
+  @include visuallyHidden;
+}
+
+.nav__list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  > li {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.nav__btn {
+  color: inherit;
+  display: block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+.nav__btn--active {
+  opacity: 0.5;
+  pointer-events: none;
+}

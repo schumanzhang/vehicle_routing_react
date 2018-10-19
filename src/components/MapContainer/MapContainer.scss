@@ -1,0 +1,28 @@
+.map-container {
+  height: 600px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.button-row {
+  text-align: center;
+}
+
+.generate {
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  background-color: #3498db;
+}
+
+.generate:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.generate:after {
+  background-color: #2980b9;
+  color: #fff;
+}
+
